@@ -41,11 +41,11 @@ THE SOFTWARE.
 
         <StackPanel x:Name="ToolPanel" Orientation="Horizontal" Grid.Row="1">
             <!-- Begin "Step 4: Add an ink toolbar" -->
-            <!--<InkToolbar x:Name="inkToolbar" 
+            <InkToolbar x:Name="inkToolbar" 
                        VerticalAlignment="Top" 
                        Margin="10,0,10,0"
                        TargetInkCanvas="{x:Bind inkCanvas}">
-            </InkToolbar>-->
+            </InkToolbar>
             <!-- End "Step 4: Add an ink toolbar" -->
             <!-- Begin "Step 7: Save and load ink" -->
             <!--<Button x:Name="buttonSave" 
@@ -62,6 +62,10 @@ THE SOFTWARE.
         </StackPanel>
 
         <Grid x:Name="drawingCanvas" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="83*"/>
+                <ColumnDefinition Width="67*"/>
+            </Grid.ColumnDefinitions>
 
             <!-- The canvas where we draw the replacement shapes. -->
             <!-- Begin Step 6: Recognize shapes -->
@@ -69,8 +73,9 @@ THE SOFTWARE.
             <!-- End Step 6: Recognize shapes -->
 
             <!-- Begin "Step 2: Use InkCanvas to support basic inking" -->
-            <InkCanvas x:Name="inkCanvas" />
-            <InkCanvas HorizontalAlignment="Center" Height="775" Margin="0,153,0,0" VerticalAlignment="Top" Width="1345"/>
+            <InkCanvas x:Name="inkCanvas" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
+          
+            <InkToolbar HorizontalAlignment="Left" Margin="615,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
             <!-- End "Step 2: Use InkCanvas to support basic inking" -->
 
         </Grid>
@@ -85,7 +90,7 @@ THE SOFTWARE.
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- Begin "Step 5: Support handwriting recognition" -->
-            <!--<Button x:Name="recognizeText" 
+            <Button x:Name="recognizeText" 
                     Content="Recognize text"  
                     Grid.Row="0" Grid.Column="0"
                     Margin="10,10,10,10"
@@ -94,7 +99,7 @@ THE SOFTWARE.
                        Text="Recognition results: "
                        VerticalAlignment="Center" 
                        Grid.Row="0" Grid.Column="1"
-                       Margin="50,0,0,0" />-->
+                       Margin="50,0,0,0" />
             <!-- End "Step 5: Support handwriting recognition" -->
             <!-- Begin "Step 6: Recognize shapes" -->
             <!--<Button Grid.Row="1" x:Name="recognizeShape" Click="recognizeShape_ClickAsync"
