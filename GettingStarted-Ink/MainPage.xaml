@@ -70,7 +70,7 @@ THE SOFTWARE.
 
             <!-- Begin "Step 2: Use InkCanvas to support basic inking" -->
             <InkCanvas x:Name="inkCanvas" />
-            <InkCanvas HorizontalAlignment="Left" Height="775" Margin="80,73,0,0" VerticalAlignment="Top" Width="1345"/>
+            <InkCanvas HorizontalAlignment="Center" Height="775" Margin="0,153,0,0" VerticalAlignment="Top" Width="1345"/>
             <!-- End "Step 2: Use InkCanvas to support basic inking" -->
 
         </Grid>
