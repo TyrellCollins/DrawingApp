@@ -22,18 +22,18 @@
 //  THE SOFTWARE.
 //  ---------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
+//using System;
+//using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
 // Begin "Step 2: Use InkCanvas to support basic inking"
 ////using directives for inking functionality.
-//using Windows.UI.Input.Inking;
-//using Windows.UI.Input.Inking.Analysis;
-//using Windows.UI.Xaml.Shapes;
-//using Windows.Storage.Streams;
+using Windows.UI.Input.Inking;
+using Windows.UI.Input.Inking.Analysis;
+using Windows.UI.Xaml.Shapes;
+using Windows.Storage.Streams;
 // End "Step 2: Use InkCanvas to support basic inking"
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
