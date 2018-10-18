@@ -299,7 +299,7 @@ namespace GettingStarted_Ink
         // End "Step 7: Save and load ink"
         public void UndoLastStroke()
         {
-            IReadOnlyList<InkStroke> strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
+            IReadOnlyList<InkStroke> strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes(); // Fetches last and stores in a new variable, I tried to get the redo function to work but after an hr decided to move on.
             if (strokes.Count > 0)
             {
                 strokes[strokes.Count - 1].Selected = true;
