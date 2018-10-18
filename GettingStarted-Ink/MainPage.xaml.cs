@@ -61,6 +61,9 @@ namespace GettingStarted_Ink
         InkAnalysisResult resultShape = null;
         // End "Step 6: Recognize shapes"
 
+        public Stack<InkStroke> UndoStrokes { get; set; }
+    
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -294,5 +297,19 @@ namespace GettingStarted_Ink
             }
         }
         // End "Step 7: Save and load ink"
-    }
+        public void UndoLastStroke()
+        {
+            IReadOnlyList<InkStroke> strokes = inkCanvas.InkPresenter.StrokeContainer.GetStrokes();
+            if (strokes.Count > 0)
+            {
+                strokes[strokes.Count - 1].Selected = true;
+                inkCanvas.InkPresenter.StrokeContainer.DeleteSelected();             
+            }
+        }
+
+        public void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            UndoLastStroke();
+        }
+    }//main
 }

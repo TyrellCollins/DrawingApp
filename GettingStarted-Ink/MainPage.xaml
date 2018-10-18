@@ -58,6 +58,14 @@ THE SOFTWARE.
                     Click="buttonLoad_ClickAsync"
                     Width="100"
                     Margin="5,0,0,0"/>
+
+
+
+            <InkToolbarCustomToolButton x:Name="UndoButton" Click="Undo_Click" ToolTipService.ToolTip="Undo" Margin="5,0,0,0">
+                <SymbolIcon Symbol="Undo"/>
+            </InkToolbarCustomToolButton>
+         
+
             <!-- End "Step 7: Save and load ink" -->
         </StackPanel>
 
@@ -74,8 +82,11 @@ THE SOFTWARE.
 
             <!-- Begin "Step 2: Use InkCanvas to support basic inking" -->
             <InkCanvas x:Name="inkCanvas" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" />
-            <InkToolbar HorizontalAlignment="Left" Margin="615,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+          
+
             <!-- End "Step 2: Use InkCanvas to support basic inking" -->
+
+
 
         </Grid>
 
